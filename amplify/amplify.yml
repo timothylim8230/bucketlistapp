@@ -1,0 +1,20 @@
+version: 1
+# force Amplify to use Node 20
+runtime-versions:
+  nodejs: 20
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
