@@ -1,7 +1,7 @@
 version: 1
 # force Amplify to use Node 22
 runtime-versions:
-  nodejs: 22
+  nodejs: 18
 
 frontend:
   phases:
